@@ -1,0 +1,14 @@
+div.logindiv {
+  margin: 0 auto;
+  padding: 10px;
+  width: 350px;
+  border : 2px solid grey
+
+}
+
+.error{
+  color: red;
+  float: right;
+  padding-right:10px
+  
+}

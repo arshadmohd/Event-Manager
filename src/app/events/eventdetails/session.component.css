@@ -1,0 +1,19 @@
+.no-border tr td, .no-border tr th {
+  border-top: none
+}
+
+.no-border tr td:first-child{
+  font-weight: bold
+}
+
+.no-border{
+  margin-bottom: 0
+}
+.session hr{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.session h4{
+  color: #0994d9
+}

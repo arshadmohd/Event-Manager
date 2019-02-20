@@ -1,0 +1,26 @@
+<div class="profileupdate">
+  <form [formGroup] ="profileForm" novalidate (ngSubmit)="saveUpdate(profileForm.value)">
+    <h2>Update profile</h2>
+    <hr />
+    <div class="form-group" [ngClass]="{'error': invalidFirstName()}">
+      <label for="firstName">First Name</label>
+      <em *ngIf="invalidFirstName() && profileForm.controls.firstName.errors.required">*Required</em>
+      <em *ngIf="invalidFirstName() && profileForm.controls.firstName.errors.pattern">*Must be alphabets</em>
+      <em *ngIf="invalidFirstName() && profileForm.controls.firstName.errors.maxlength">*Max Length 10</em>
+      <input formControlName="firstName" type="text" name="firstName" id="firstName" placeholder="First name..." class="form-control" />
+    </div>  
+    <div class="form-group" [ngClass]="{'error': invalidLastName()}">
+      <label for="lastName">Last Name</label>
+      <em *ngIf="invalidLastName() && profileForm.controls.lastName.errors.required">Required</em>
+      <em *ngIf="invalidLastName() && profileForm.controls.lastName.errors.pattern">*Must be alphabets</em>
+      <em *ngIf="invalidLastName() && profileForm.controls.lastName.errors.maxlength">*Max length 5</em>
+      <input formControlName="lastName" type="text" name="lastName" id="lastName" class="form-control" placeholder="Last name ..." />
+    </div>
+    <div  style="text-align: center">
+      <span>
+        <button class="btn btn-primary" style="margin-right: 10px">Save</button>
+        <button class="btn" (click)="cancleUpdate()">Cancel</button>
+      </span>
+    </div>
+  </form>
+</div>

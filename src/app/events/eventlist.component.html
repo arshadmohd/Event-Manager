@@ -1,0 +1,13 @@
+
+<div class="">
+  <h2>Upcoming Event List</h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-4"  *ngFor = "let event of events" >
+      <div class="eventbox"  >
+        <event-thumbnail #eventlistholder [event] = 'event' (clickEvent)="handleClickInParent($event)"></event-thumbnail>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.new-event{
+  width: 400px; 
+  margin: 0 auto;
+  
+}
+.button-place{
+  margin: 10px;
+  text-align: center
+}
+.button-place button{
+  margin: 5px;
+}
+
+
+
+.error em {
+  float: right;
+  color: ##ee7373;
+  margin-right: 10px;
+}
+

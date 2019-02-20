@@ -1,0 +1,16 @@
+.cheapPrice{
+  border-left: 10px solid green;
+  font-weight: bold;
+}
+
+.highPrice{
+  border-left: 10px solid red;
+  font-weight: bold;
+}
+
+.eventthumbnail div{
+  margin: 5px
+}
+.eventthumbnail{
+  cursor: pointer;
+}

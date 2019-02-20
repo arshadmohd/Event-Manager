@@ -1,0 +1,21 @@
+<div class="session well howerwell thumbnail">
+    <div class="">
+      <h4>{{session.name | uppercase}}</h4>
+    </div>    
+    <table class="table no-border">
+      <tr>
+        <th>Presenter: </th>
+        <td>{{session.presenter | uppercase}}</td>
+        <th>Level: </th>
+        <td>{{session.level}}</td>
+      </tr>
+      
+      <tr>
+        <th>Duration: </th>
+        <td>{{session.duration | duration}}</td>
+        <th>No of Demands: </th>
+        <td>{{session?.voters?.length}}</td>
+      </tr>    
+       
+    </table>
+</div>

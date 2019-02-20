@@ -1,0 +1,16 @@
+.profileupdate{
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+.error input{
+  background-color: #ee7373;
+}
+
+.error em {
+  float: right;
+  color: ##ee7373;
+  margin-right: 10px;
+}

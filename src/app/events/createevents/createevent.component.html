@@ -1,0 +1,28 @@
+<div class="new-event">
+  <h3>Create new event</h3>
+  <div>
+    <form [formGroup]="createEvent" novalidate (ngSubmit)="saveUpdate(profileForm.value)">
+      <div [ngClass]="{'error': createEvent.invalid}">
+        <label for="name">Name</label>
+        <em *ngIf="name.invalid && name.dirty">*Required</em>
+        <input type="text" formControlName="name" name="name" placeholder="Event name" class="form-control" />
+      </div>
+      <div>
+        <label for="date">Date</label>
+        <input type="date" formControlName ="date" name="date" placeholder="Event date" class="form-control" />
+      </div>
+      <div>
+        <label for="time">Time</label>
+        <input type="text" formControlName ="time" name="time" placeholder="Event time" class="form-control" />
+      </div>      
+      <div>
+        <label for="name">Price</label>
+        <input type="number"  formControlName ="price" name="price" placeholder="Event price" class="form-control" />
+      </div>
+      <div class="button-place">
+        <button class="btn btn-primary">Create</button>
+        <button class="btn btn-default">Cancel</button>
+      </div>
+    </form>
+  </div>
+  </div>

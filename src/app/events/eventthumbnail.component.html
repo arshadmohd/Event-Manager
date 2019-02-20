@@ -1,0 +1,9 @@
+<div [routerLink]="['/event', event.id]" class="well howerwell thumbnail eventthumbnail"  [ngClass] = "{
+  'highPrice': event.price  > 600,
+  'cheapPrice': event.price < 600
+}">
+  <div style="font-weight: bold"> {{event.name | uppercase}} <span class="pull-right">{{event.date | date:'dd-MM-yyyy'}} | {{event.time}}</span> </div>
+  <div>  </div>
+  <div> USD {{event.price | currency:USD}} | <span *ngIf="event.price != 600">{{event.price > 600 ? 'High price' : 'Low Price'}}</span> <span *ngIf="event.price == 1000"> Normal Price</span> </div>
+
+</div>
