@@ -4,7 +4,7 @@
       <div class="" style="vertical-align:middle">
         <span><img [src]="event.imageUrl" [alt]="event?.name" class="eventimage"></span> <span style="font-size: 15px; font-weight: bold"> {{event.name | uppercase}}</span>
         <span *ngIf="!addmode" class="pull-right btn btn-primary" (click)="toggleMode()" >Add Session</span>
-        <div style="text-align:center">
+        <div style="text-align:center" *ngIf="!addmode">
           <div class="btn-group btn-group-sm">
             <button class="btn" [class.active]="filterby=='all'" (click)="filterBy('all')">All</button>
             <button class="btn" [class.active]="filterby=='beginner'" (click)="filterBy('beginner')">Beginner</button>
