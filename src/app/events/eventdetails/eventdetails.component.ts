@@ -17,11 +17,17 @@ export class EventDetailComponent {
   sessions: ISession[];
   visibleSessions: ISession[];
     constructor(private eventListService: EventListService, private activatedRoute: ActivatedRoute) {}
-    ngOnInit() {
-      console.log(this.activatedRoute.snapshot);
-      this.event = this.eventListService.getEvent(+this.activatedRoute.snapshot.params['id']);
-      this.sessions = this.event.sessions;
-      this.visibleSessions = this.sessions.slice(0);
+    
+    ngOnInit() {      
+        this.activatedRoute.params.forEach((param) => {
+        this.event = this.eventListService.getEvent(+param['id']);
+        this.sessions = this.event.sessions;
+        this.visibleSessions = this.sessions.slice(0);
+        this.addmode =  false;
+      })
+
+      //this.event = this.eventListService.getEvent(+this.activatedRoute.snapshot.params['id']);
+      
   }
 
   toggleMode() {
