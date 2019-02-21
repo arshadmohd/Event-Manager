@@ -15,7 +15,7 @@
         <hr>
         <div *ngIf="!addmode">
           <div *ngFor="let session of visibleSessions" class="col-md-6">
-            <session [session]="session"></session>
+            <session [session]="session" (click)="openSession(session)" trigger-modal="sessiondetail-modal"></session>
           </div>
         </div>
         <div *ngIf="addmode">
@@ -26,3 +26,31 @@
     </div>
   </div>
 </div>
+
+
+<simple-modal elementId = "sessiondetail-modal" title="Session Details">
+  <div>
+    <table class="table">
+      <tr>
+        <td>Name</td>
+        <td>{{sessionForDetailing?.name}}</td>
+      </tr>
+      <tr>
+        <td>Presenter</td>
+        <td>{{sessionForDetailing?.presenter}}</td>
+      </tr>
+      <tr>
+        <td>Level</td>
+        <td>{{sessionForDetailing?.level}}</td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td>{{sessionForDetailing?.duration}}</td>
+      </tr>
+      <tr>
+        <td>About</td>
+        <td>{{sessionForDetailing?.abstract}}</td>
+      </tr>
+    </table>
+  </div>
+</simple-modal>

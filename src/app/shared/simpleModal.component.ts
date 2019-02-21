@@ -23,11 +23,7 @@ import { Component, Input } from "@angular/core";
         .modal-body{
             height: 300px;
             overflow-y: auto;
-            background: #eeeeee;
-        }
-        .modal-header{
-            background: green;
-        }
+        }        
     `]
 })
 

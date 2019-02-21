@@ -16,6 +16,7 @@ export class EventDetailComponent {
   filterby = 'all';
   sessions: ISession[];
   visibleSessions: ISession[];
+  sessionForDetailing: ISession;
     constructor(private eventListService: EventListService, private activatedRoute: ActivatedRoute) {}
     
     ngOnInit() {      
@@ -42,6 +43,11 @@ export class EventDetailComponent {
     } else {
       this.visibleSessions = this.sessions.slice(0).filter(session => session.level.toLowerCase() == value);
     }
+  }
+
+  openSession(session){
+    console.log('this is selected session: ',session);
+    this.sessionForDetailing = session;
   }
 
 }
